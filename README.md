@@ -1,189 +1,136 @@
-# 🤖 RAG Telegram Bot
+🤖 RAG Telegram Bot
+A lightweight, production-ready Telegram bot powered by Retrieval-Augmented Generation (RAG) pipeline using:
 
-A lightweight, production-ready Telegram bot powered by **Retrieval-Augmented Generation (RAG)** pipeline using:
-- 🗂 **ChromaDB** for local document retrieval.
-- 💡 **OpenAI GPT (Chat Completions API)** for natural language generation.
-- 🌐 **Serper API** for real-time web search fallback.
+🗂 ChromaDB for local document retrieval.
+
+💡 OpenAI GPT (Chat Completions API) for natural language generation.
+
+🌐 Serper API for real-time web search fallback.
 
 This bot allows users to ask questions via Telegram and get smart, contextualized answers using both your private knowledge base (ChromaDB) and live Google search.
 
-
-
-## 💬 Try the Bot
-
+💬 Try the Bot
 You can try the bot directly on Telegram by clicking the link below:
 
-[👉 Open ClientSupportBot on Telegram](https://t.me/Client_Supportt_Bot)
+👉 Open ClientSupportBot on Telegram
 
----
+🚀 Features
+✅ Retrieval-Augmented Generation (RAG) pipeline
+✅ Uses ChromaDB for vector retrieval
+✅ Uses OpenAI ChatGPT for response generation
+✅ Uses Serper API for live web search integration
+✅ Ready for deployment on Railway / Render / Heroku
+✅ Secure API key management using .env file
 
-## 🚀 Features
-
-✅ Retrieval-augmented generation (RAG) pipeline.  
-✅ Uses **ChromaDB** for vector retrieval.  
-✅ Uses **OpenAI ChatGPT** for response generation.  
-✅ Uses **Serper API** for live web search integration.  
-✅ Ready for deployment on **Railway / Render / Heroku**.  
-✅ Safe API key management using environment variables.  
-
----
-
-## 📁 Project Structure
+📁 Project Structure
 
 rag-telegram-bot/
 
 ├── client_support_output/
 
-│ └── text/ # Text files to be embedded into ChromaDB
+│   └── text/                 # Text files to be embedded into ChromaDB
 
-│ └── prepare_chroma_from_txt.py # Script to prepare ChromaDB from text
+│   └── prepare_chroma_from_txt.py  # Script to prepare ChromaDB from text files
 
-├── bot_rag_chroma.py # Main Telegram bot code
+├── bot_rag_chroma.py          # Main Telegram bot code
 
-├── requirements.txt # Python dependencies
+├── requirements.txt           # Python dependencies
 
-├── Procfile # Railway deployment file (worker mode)
+├── Procfile                   # For Railway deployment (worker mode)
 
-├── .env.example # Environment variable template
+├── .env.example               # Environment variable template
 
-
----
-
-## 🔧 Setup Instructions
-💻 How to run this Bot locally on your computer (Windows / Mac / Linux)
+🔧 Setup Instructions
+💻 How to run this Bot locally (Windows / Mac / Linux)
 ✅ Step 1: Clone the repository
-Open your terminal or command prompt and run:
 
-bash
-Copy
-Edit
 git clone https://github.com/ALBADWIMAJID/rag-telegram-bot.git
 cd rag-telegram-bot
-✅ Step 2: Create and activate a virtual environment (Recommended)
+✅ Step 2: Create and activate a virtual environment
 On Windows:
-bash
-Copy
-Edit
+
 python -m venv venv
 venv\Scripts\activate
 On Mac/Linux:
-bash
-Copy
-Edit
+
 python3 -m venv venv
 source venv/bin/activate
-✅ Step 3: Install the project dependencies
-bash
-Copy
-Edit
+✅ Step 3: Install dependencies
+
 pip install -r requirements.txt
-✅ Step 4: Prepare ChromaDB from your local support documents
-Add your .txt support documents inside the client_support_output/text folder.
+✅ Step 4: Prepare ChromaDB from your .txt documents
+Place your .txt files inside client_support_output/text/
 
-Then run:
+Run:
 
-bash
-Copy
-Edit
+
 python prepare_chroma_from_txt.py
-This will create the local ChromaDB inside chroma_db folder.
+This will generate the ChromaDB in ./chroma_db.
 
-✅ Step 5: Create your .env file for the API keys
-Copy the provided .env.example file and rename it to .env.
+✅ Step 5: Setup your .env file
+Copy .env.example to .env
 
-Open .env and replace the placeholders:
+Fill it with your credentials:
 
-ini
-Copy
-Edit
-OPENAI_API_KEY=your_openai_key_here
+
+
+OPENAI_API_KEY=your_openai_api_key_here
 TELEGRAM_TOKEN=your_telegram_bot_token_here
 SERPER_API_KEY=your_serper_api_key_here
-💡 Important:
-
-You must have valid API keys from OpenAI, Serper (https://serper.dev/), and your created Telegram bot (from BotFather).
-
-Never share these keys publicly.
-
 ✅ Step 6: Run the bot locally
 
 python bot_rag_chroma.py
-If everything is correct, the bot will start running and will be waiting for messages on Telegram.
-
 💡 How to test the bot
-Open Telegram.
+Open Telegram and search for your bot (the username from BotFather).
 
-Search for your bot using the username you created in BotFather.
+Send any question, like:
 
-Send any question (e.g. How do I reset my Discord password?).
+How do I reset my Steam password?
 
-The bot will respond by retrieving data from your documents and Google search via Serper API.
+How to enable 2FA in Discord?
 
-⚠ Notes:
-Every time you restart your PC, activate your environment again:
+The bot will answer from ChromaDB and Google search via Serper API.
+
+⚠ Notes for local run
+Every time you restart your PC:
 
 
 venv\Scripts\activate  # Windows
 source venv/bin/activate  # Mac/Linux
-You can add or update .txt files anytime inside client_support_output/text and re-run prepare_chroma_from_txt.py to refresh ChromaDB.
+You can always add new .txt files and re-run prepare_chroma_from_txt.py.
 
-Make sure your .env file is correct and in the root of the project.
-### 1. Clone the Repository
+Make sure .env is present and configured correctly.
 
-```bash
-git clone https://github.com/ALBADWIMAJID/rag-telegram-bot.git
-cd rag-telegram-bot
-2. Configure Environment Variables
-Create your .env file by copying from .env.example and replacing the placeholders:
+☁️ Deployment to Railway (24/7 Hosting)
+1. Push your code to GitHub (ensure no secrets are hardcoded)
 
-
-OPENAI_API_KEY=sk-...
-TELEGRAM_TOKEN=your_telegram_bot_token_here
-SERPER_API_KEY=your_serper_api_key_here
-3. Prepare ChromaDB (Optional if using your own documents)
-Put your .txt files inside client_support_output/text/ then run:
-
-
-
-python prepare_chroma_from_txt.py
-This will generate the ChromaDB folder ./chroma_db.
-
-▶️ Run the Bot Locally
-
-
-
-python bot_rag_chroma.py
-☁️ Deploy to Railway
-Push your code to GitHub (do not include real secrets; use .env.example).
-
-Create a new project in Railway.
+git add .
+git commit -m "Clean RAG Telegram Bot safe version"
+git push
+2. On Railway:
+Create a new project.
 
 Connect your GitHub repository.
 
-Go to Variables tab and add:
+Go to Variables, and add:
+
 
 OPENAI_API_KEY
-
 TELEGRAM_TOKEN
-
 SERPER_API_KEY
-
-Ensure your bot runs as a worker using the Procfile:
-
+3. Ensure your Procfile is correct:
 
 worker: python bot_rag_chroma.py
-Click Deploy.
-
+4. Click Deploy.
 🔒 Security Notice
-Always use environment variables.
+Always use environment variables (.env) and never hardcode or push your API keys to GitHub.
 
-Do not hardcode or push secrets to GitHub.
-
-Use .gitignore to avoid uploading sensitive files.
+Use .gitignore to prevent uploading sensitive files.
 
 👷 Requirements
 Python 3.9+
-Install dependencies:
+
+Install all dependencies:
 
 
 pip install -r requirements.txt
@@ -192,27 +139,24 @@ ChromaDB
 
 LangChain
 
-OpenAI GPT
+OpenAI GPT (Chat Completions API)
 
 Serper API
 
-python-telegram-bot
+Python Telegram Bot
 
 📚 Usage Examples
-Ask the bot questions like:
+How do I reset my Discord password?
 
-How do I reset my Steam account password?
+How to recover my Netflix account?
 
-How to enable 2FA in Discord?
+How to set up Gmail in Outlook?
 
-How do I recover my Netflix account?
-
-The bot will retrieve relevant data from your private knowledge base and supplement it with real-time Google search.
+The bot will answer using your private documents and supplement them with fresh Google search.
 
 📄 License
 MIT License
 
 👤 Author
 Made with ❤️ by Majid Albadwi
-
-For demo & academic use.
+For demonstration & academic use only.
