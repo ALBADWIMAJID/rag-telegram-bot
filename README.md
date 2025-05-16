@@ -7,6 +7,14 @@ A lightweight, production-ready Telegram bot powered by **Retrieval-Augmented Ge
 
 This bot allows users to ask questions via Telegram and get smart, contextualized answers using both your private knowledge base (ChromaDB) and live Google search.
 
+
+
+## 💬 Try the Bot
+
+You can try the bot directly on Telegram by clicking the link below:
+
+[👉 Open ClientSupportBot on Telegram](https://t.me/ClientSupportBot)
+
 ---
 
 ## 🚀 Features
