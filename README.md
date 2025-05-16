@@ -13,7 +13,7 @@ This bot allows users to ask questions via Telegram and get smart, contextualize
 
 You can try the bot directly on Telegram by clicking the link below:
 
-[👉 Open ClientSupportBot on Telegram](https://t.me/ClientSupportBot)
+[👉 Open ClientSupportBot on Telegram](https://t.me/Client_Supportt_Bot)
 
 ---
 
