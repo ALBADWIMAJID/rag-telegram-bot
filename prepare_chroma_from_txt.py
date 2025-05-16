@@ -4,15 +4,20 @@ from langchain_chroma import Chroma
 import os
 
 OPENAI_API_KEY = os.getenv("OPENAI_API_KEY")
-TEXT_DIRECTORY = r"C:\Users\albad\Desktop\my works\мои работы в 6 семестр\Диалоговые системы\chatbot telegram\client_support_output\text"
+
+# استخدام مجلد مؤقت داخل الحاوية (كل مرة يبدأ نظيف)
+PERSIST_DIRECTORY = "/tmp/chroma_db"
 
 embedding = OpenAIEmbeddings(api_key=OPENAI_API_KEY)
 documents = []
 
+# تحميل كل ملفات TXT داخل مشروعك (في مجلد ثابت)
+TEXT_DIRECTORY = "./text"  # يجب أن تضع الملفات هنا داخل مشروعك قبل الـ build
+
 for filename in os.listdir(TEXT_DIRECTORY):
     if filename.endswith(".txt"):
         filepath = os.path.join(TEXT_DIRECTORY, filename)
-        loader = TextLoader(filepath, encoding="utf-8")  # إجبار الترميز على UTF-8
+        loader = TextLoader(filepath, encoding="utf-8")
         try:
             docs = loader.load()
             documents.extend(docs)
@@ -20,8 +25,9 @@ for filename in os.listdir(TEXT_DIRECTORY):
         except Exception as e:
             print(f"❌ خطأ أثناء تحميل {filename}: {e}")
 
+# إنشاء قاعدة بيانات مؤقتة كل مرة يعمل البوت
 db = Chroma.from_documents(
-    documents, embedding, persist_directory="./chroma_db"
+    documents, embedding, persist_directory=PERSIST_DIRECTORY
 )
 
-print("✅ تم تحميل جميع الملفات إلى ChromaDB وحفظها بنجاح في ./chroma_db")
+print(f"✅ تم تحميل جميع الملفات ({len(documents)}) إلى ChromaDB في {PERSIST_DIRECTORY}")
