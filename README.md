@@ -23,12 +23,19 @@ This bot allows users to ask questions via Telegram and get smart, contextualize
 ## 📁 Project Structure
 
 rag-telegram-bot/
+
 ├── client_support_output/
+
 │ └── text/ # Text files to be embedded into ChromaDB
+
 │ └── prepare_chroma_from_txt.py # Script to prepare ChromaDB from text
+
 ├── bot_rag_chroma.py # Main Telegram bot code
+
 ├── requirements.txt # Python dependencies
+
 ├── Procfile # Railway deployment file (worker mode)
+
 ├── .env.example # Environment variable template
 
 
