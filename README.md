@@ -1,61 +1,74 @@
-# RAG Telegram Bot 🤖 (ChromaDB + OpenAI + Serper API)
+# 🤖 RAG Telegram Bot
 
-A lightweight Telegram bot that uses RAG (Retrieval-Augmented Generation) pipeline powered by:
-- 🗂 ChromaDB (local or cloud via Supabase Storage)
-- 💡 OpenAI GPT (Chat Completions API)
-- 🌐 Serper API (Google search results as fallback)
+A lightweight, production-ready Telegram bot powered by **Retrieval-Augmented Generation (RAG)** pipeline using:
+- 🗂 **ChromaDB** for local document retrieval.
+- 💡 **OpenAI GPT (Chat Completions API)** for natural language generation.
+- 🌐 **Serper API** for real-time web search fallback.
 
----
-
-## Features
-- Custom RAG pipeline combining **ChromaDB embeddings** and **Live Web search (Serper API)**.
-- Telegram bot interface via **python-telegram-bot**.
-- Deployable on **Railway, Render, Heroku, etc.**
-- Full separation of API keys using environment variables for security.
+This bot allows users to ask questions via Telegram and get smart, contextualized answers using both your private knowledge base (ChromaDB) and live Google search.
 
 ---
 
-## Project Structure
+## 🚀 Features
+
+✅ Retrieval-augmented generation (RAG) pipeline.  
+✅ Uses **ChromaDB** for vector retrieval.  
+✅ Uses **OpenAI ChatGPT** for response generation.  
+✅ Uses **Serper API** for live web search integration.  
+✅ Ready for deployment on **Railway / Render / Heroku**.  
+✅ Safe API key management using environment variables.  
+
+---
+
+## 📁 Project Structure
+
+rag-telegram-bot/
+├── client_support_output/
+│ └── text/ # Text files to be embedded into ChromaDB
+│ └── prepare_chroma_from_txt.py # Script to prepare ChromaDB from text
+├── bot_rag_chroma.py # Main Telegram bot code
+├── requirements.txt # Python dependencies
+├── Procfile # Railway deployment file (worker mode)
+├── .env.example # Environment variable template
+
+
+---
+
+## 🔧 Setup Instructions
+
+### 1. Clone the Repository
 
 ```bash
-📁 client_support_output/
- └── text/               # Prepared text files for ChromaDB embedding
- └── prepare_chroma_from_txt.py  # Script to prepare and persist ChromaDB from TXT
- └── bot_rag_chroma.py    # Main Telegram Bot RAG logic
- └── requirements.txt
- └── Procfile             # For Railway Deployment
- └── .env.example         # Example of required secrets
-
-Setup Instructions
-1. Clone the repository
-
 git clone https://github.com/ALBADWIMAJID/rag-telegram-bot.git
 cd rag-telegram-bot
-2. Prepare .env file
-Create a .env file using the provided .env.example template:
+2. Configure Environment Variables
+Create your .env file by copying from .env.example and replacing the placeholders:
 
 
-OPENAI_API_KEY=your_openai_api_key_here
+OPENAI_API_KEY=sk-...
 TELEGRAM_TOKEN=your_telegram_bot_token_here
 SERPER_API_KEY=your_serper_api_key_here
-3. Prepare ChromaDB from your text files
-Ensure you have your .txt files in client_support_output/text/, then run:
+3. Prepare ChromaDB (Optional if using your own documents)
+Put your .txt files inside client_support_output/text/ then run:
+
 
 
 python prepare_chroma_from_txt.py
-This will create a persistent ChromaDB at ./chroma_db.
+This will generate the ChromaDB folder ./chroma_db.
 
-Running the bot locally
+▶️ Run the Bot Locally
+
+
 
 python bot_rag_chroma.py
-Deployment (Railway Example)
-Push your repo to GitHub (without secrets, only .env.example).
+☁️ Deploy to Railway
+Push your code to GitHub (do not include real secrets; use .env.example).
 
-Create project in Railway.
+Create a new project in Railway.
 
-Link your repo.
+Connect your GitHub repository.
 
-In Railway Variables, add your actual:
+Go to Variables tab and add:
 
 OPENAI_API_KEY
 
@@ -63,31 +76,51 @@ TELEGRAM_TOKEN
 
 SERPER_API_KEY
 
-Ensure your bot runs as worker service using:
-
-Railway auto-detects your Procfile.
-
-Example Procfile:
-
+Ensure your bot runs as a worker using the Procfile:
 
 
 worker: python bot_rag_chroma.py
-Deploy.
+Click Deploy.
 
-Notes
-You can switch ChromaDB to use Supabase Storage by modifying prepare_chroma_from_txt.py.
+🔒 Security Notice
+Always use environment variables.
 
-This project currently uses langchain-chroma, langchain-openai, and python-telegram-bot.
+Do not hardcode or push secrets to GitHub.
 
-Make sure to never push your API keys to GitHub (always use .env & Railway Variables).
+Use .gitignore to avoid uploading sensitive files.
 
-License
-MIT License.
+👷 Requirements
+Python 3.9+
+Install dependencies:
 
-Credits
-Created by Majid Albadwi
-This bot was built as part of a dialog systems project, combining modern retrieval and generation pipelines.
 
-yaml
-Copy
-Edit
+pip install -r requirements.txt
+💡 Technologies Used
+ChromaDB
+
+LangChain
+
+OpenAI GPT
+
+Serper API
+
+python-telegram-bot
+
+📚 Usage Examples
+Ask the bot questions like:
+
+How do I reset my Steam account password?
+
+How to enable 2FA in Discord?
+
+How do I recover my Netflix account?
+
+The bot will retrieve relevant data from your private knowledge base and supplement it with real-time Google search.
+
+📄 License
+MIT License
+
+👤 Author
+Made with ❤️ by Majid Albadwi
+
+For demo & academic use.
