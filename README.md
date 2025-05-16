@@ -180,5 +180,5 @@ MIT License
 ---
 
 ## 👤 Author
-Made with ❤ by **Majid Albadwi**  
+Made with  by **Majid Albadwi**  
 For demonstration & academic use only.
