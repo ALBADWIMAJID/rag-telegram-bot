@@ -1,0 +1,57 @@
+How to change or reset your password | Netflix Help Center
+========================================================== - Back to Help Home # How to change or reset your password ## Changing your password
+If you know your password and can sign in to Netflix but want to change it, go to theChange passwordpage. - You can’t change your password if aKidsprofile is active.Change to another profilefirst and then change the password.
+You can’t change your password if aKidsprofile is active.Change to another profilefirst and then change the password. When choosing a password, it should be: - Different than what you use for any other websites or apps
+Different than what you use for any other websites or apps - At least 8 characters long
+At least 8 characters long - A mix of uppercase and lowercase letters, numbers, and symbols
+A mix of uppercase and lowercase letters, numbers, and symbols - Not easily guessed - such as “password,” “12345678,” or use any personal information (name, birthday, address)
+Not easily guessed - such as “password,” “12345678,” or use any personal information (name, birthday, address) A password manager can make it easier to keep track of unique passwords. If you can't sign in or remember your password, read the section below. ## Resetting your password
+You can reset your password by asking for a reset link to be sent to the email or mobile phone number* that’s on your Netflix account. If you can't remember either, you might be able to recover your account using your payment information. *This will only work for accounts that already have amobile phone numberassociated with them. Reset password by email - Go tonetflix.com/loginhelp.
+Go tonetflix.com/loginhelp. - ChooseEmail.
+ChooseEmail. - Enter your email address and clickEmail Me.
+Enter your email address and clickEmail Me. - Look for an email from Netflix about resetting your password. It should arrive within a few minutes.
+Look for an email from Netflix about resetting your password. It should arrive within a few minutes. - Click the link in the email to be signed into Netflix automatically.
+Click the link in the email to be signed into Netflix automatically. - Once signed in, you'll be asked to create a new password. Your new password can't be the same as your last password.
+Once signed in, you'll be asked to create a new password. Your new password can't be the same as your last password. Link expiration - The email link will expire after 24 hours. You can always request a new one by going tonetflix.com/loginhelp.
+The email link will expire after 24 hours. You can always request a new one by going tonetflix.com/loginhelp. Didn't get the email - Check for it in your spam, junk, or promotions folders, and in any email filters you set up.
+Check for it in your spam, junk, or promotions folders, and in any email filters you set up. - If you can't find the password reset email after checking your folders, try adding info@account.netflix.com to your contact list. Thensend yourself a password reset emailagain.
+If you can't find the password reset email after checking your folders, try adding info@account.netflix.com to your contact list. Thensend yourself a password reset emailagain. - If you still don't get the password reset email, your email provider may be delaying it. Please wait 5 hours, then check your inbox again.
+If you still don't get the password reset email, your email provider may be delaying it. Please wait 5 hours, then check your inbox again. Link doesn't work - Delete any Netflix password reset emails that are in your inbox.
+Delete any Netflix password reset emails that are in your inbox. - Once you've deleted the emails, go tonetflix.com/clearcookies. This will sign you out and take you back to the home page.
+Once you've deleted the emails, go tonetflix.com/clearcookies. This will sign you out and take you back to the home page. - Go tonetflix.com/loginhelp.
+Go tonetflix.com/loginhelp. - ChooseEmail.
+ChooseEmail. - Enter your email address and clickEmail Me.
+Enter your email address and clickEmail Me. - Go back to your email and follow the steps in the new Netflix password reset email.
+Go back to your email and follow the steps in the new Netflix password reset email. If you're still having trouble, try resetting your password on a different computer, mobile phone, or tablet.This password is not secure or is too common If you see this message​when resetting or changing your password, it means that the password you chose is on a list of compromised or commonly used passwords which we don't allow for security reasons. You’ll need to choose a different one. Reset password by text message (SMS) - Go tonetflix.com/loginhelp.
+Go tonetflix.com/loginhelp. - ChooseText Message (SMS).
+ChooseText Message (SMS). - Enter the phone number associated with your account.
+Enter the phone number associated with your account. - ClickText Me.
+ClickText Me. - You'll be sent a verification code by text message. Enter that code to reset your password. The code expires after 20 minutes.
+You'll be sent a verification code by text message. Enter that code to reset your password. The code expires after 20 minutes. - After entering the code, you'll be asked to create a new password. Your new password can't be the same as your last password.
+After entering the code, you'll be asked to create a new password. Your new password can't be the same as your last password. Phone number not linked to accountIf you haven't added a phone number to your account, you'll need to reset your password by email. After signing in, you can add a phone number at any time by going to yourAccountpage and selectingAdd phone number. If the phone number on your account is no longer valid, go to yourAccountpage and selectChange phone number. Recover your account info using billing information If you pay for Netflix with a credit or debit card: - You’ll need your credit or debit card number.
+You’ll need your credit or debit card number. - Go tonetflix.com/loginhelp.
+Go tonetflix.com/loginhelp. - ChooseI don't remember my email or phone.If you don't see this option, recovery by billing information isn't available in your region.Contact usfor help.
+ChooseI don't remember my email or phone. - If you don't see this option, recovery by billing information isn't available in your region.Contact usfor help.
+If you don't see this option, recovery by billing information isn't available in your region.Contact usfor help. - Enter the first and last name on the account, as well as the credit or debit card number used for the account.
+Enter the first and last name on the account, as well as the credit or debit card number used for the account. - SelectFind Account.
+SelectFind Account. - If we can find your account with that information, we’ll send a password reset email to the email address on the account.
+If we can find your account with that information, we’ll send a password reset email to the email address on the account. If you're billed through a third party and can't sign in: If you pay for Netflix through a third party, or your subscription is included in a package, search our Help Center for the name of the third party to find the right article. Then see the "I'm having trouble signing in to Netflix" section for instructions. If you don’t use a debit or credit card to pay for Netflix,contact usfor help. ### Related Articles
+- Can't sign in to Netflix
+- How to update Netflix account information
+- How to keep your account secure
+- Billing and Payments
+- How to create, edit, or delete profiles ### Related Articles
+- Can't sign in to Netflix
+- How to update Netflix account information
+- How to keep your account secure
+- Billing and Payments
+- How to create, edit, or delete profiles ### Need more help?
+- Terms of Use
+- Privacy
+- Ad Choices
+- Cookie Preferences
+- Impressum
+
+
+----------
+Дата извлечения: 2025-05-16 22:03:32

@@ -1,0 +1,102 @@
+ IMAP Synchronization | Thunderbird Help =========================================== - Skip to main content
+- Switch language
+- Skip to search
+Mozilla Monitor website will be down for 2 hours starting 5/20/2025 at 6 AM PT. Visitour status sitefor updates. - Explore Help ArticlesClose Firefox menuExplore by productFirefox desktopMozilla VPNFirefox for iOSThunderbirdFirefox for AndroidView all productsExplore by topicSettingsInstallation and updatesEmail and messagingPerformance and connectivityPrivacy and securityBrowse #### Explore by product
+- Firefox desktop
+- Mozilla VPN
+- Firefox for iOS
+- Thunderbird
+- Firefox for Android
+- View all products #### Explore by topic
+- Settings
+- Installation and updates
+- Email and messaging
+- Performance and connectivity
+- Privacy and security
+- Browse
+- Community ForumsClose Firefox menuBrowse by productFirefox desktopFirefox FocusFirefox for iOSThunderbirdFirefox for AndroidView all forumsBrowse all forum threads by topicSettingsInstallation and updatesEmail and messagingPerformance and connectivityPrivacy and securityBrowse #### Browse by product
+- Firefox desktop
+- Firefox Focus
+- Firefox for iOS
+- Thunderbird
+- Firefox for Android
+- View all forums #### Browse all forum threads by topic
+- Settings
+- Installation and updates
+- Email and messaging
+- Performance and connectivity
+- Privacy and security
+- Browse
+- Ask a QuestionClose Firefox menuGet help withFirefox desktopFirefox for EnterpriseFirefox RelayThunderbirdFirefox for iOSFirefox FocusMonitorMozilla AccountFirefox for AndroidMozilla VPNPocketView all #### Get help with
+- Firefox desktop
+- Firefox for Enterprise
+- Firefox Relay
+- Thunderbird
+- Firefox for iOS
+- Firefox Focus
+- Monitor
+- Mozilla Account
+- Firefox for Android
+- Mozilla VPN
+- Pocket
+- View all
+- Contribute
+- SearchDownload Firefox
+- Sign In/Up #### Search Support
+- Home
+- Thunderbird
+- Settings
+- IMAP Synchronization ## Ask a Question
+Still need help? Sign in to ask your question on our forums. - Customize this articleThunderbirdVersion 128Version 115Version 52Version 45Version 38Version 31Version 24Version 17Windows 8Windows 7/VistaWindows XPMacLinuxWindows 10
+- Customize this articleThunderbirdVersion 128Version 115Version 52Version 45Version 38Version 31Version 24Version 17Windows 8Windows 7/VistaWindows XPMacLinuxWindows 10 ### Customize this article #### Was this article helpful? # IMAP Synchronization ## Table of Contents
+- 1About IMAP
+- 2Benefits of IMAP
+- 3Synchronization
+- 4Performance and search
+- 5Disk space usage
+- 6Configuring synchronization and disk space usage # About IMAP
+IMAP stands for the Internet Message Access Protocol. It enables a mail client (such as Thunderbird) to access messages stored on a mail server. It is more modern and fully featured than POP (Post Office Protocol), which is the other major protocol for accessing mail messages. Most email providers now support IMAP. To see whether your account uses IMAP or POP, check the Server Settings page in the Account Settings: # Benefits of IMAP
+The IMAP protocol supports both online and offline activity. Therefore, messages can be stored both on the local machine and on the server, enabling numerous benefits: - Multiple clients can be used to access messages. For example, a Thunderbird user with a Microsoft Live account can use both the Thunderbird application that is installed on their system and the web-based interface provided by Microsoft.
+- Thunderbird users can download their messages to their local system and access them even when they are not connected to the internet.
+- Messages load faster when they are stored on a local drive. Search performance is much faster than searching a set of messages on a remote server. Full-text search of a message body is only possible on messages that have been downloaded.
+In order to provide this kind of flexibility and functionality, though, messages must be synchronized between the local machine and the email server. # Synchronization
+To understand message synchronization, consider the following scenarios: - A message is downloaded to Thunderbird and deleted in Thunderbird. (The message must be deleted from both the local machine and the email server.)
+- A message is downloaded to Thunderbird and later deleted by a web-based client (such as Yahoo Mail or Gmail). (The message must be deleted from the Thunderbird message repository.)
+- A draft message is composed and saved (but not sent) in Thunderbird. (The draft must be copied from the Thunderbird message repository to the email server.)
+Whenever Thunderbird starts, it checks the state of synchronization between the Thunderbird message repository and the email server, and then performs any transfers that are necessary (such as downloading new messages from the server, deleting from the server any messages that have been deleted locally, etc). Thunderbird continually synchronizes with the email server as long as it is running and has access to the internet. If internet access is lost, Thunderbird will synchronize when access is reestablished. Non-synchronized messages are still accessible within Thunderbird. The only difference is that rather than downloading the entire message, only the message "headers" are downloaded. (Message headers contain information like the sender, recipient(s), subject, etc - everything except the body of the message.) The message body is not downloaded until you click on the message in the message list (which means that if you are not online, you can't read the message). Synchronization impacts performance and disk space usage. # Performance and search
+Messages that are stored locally load faster than messages stored on an email server. When messages are stored on an email server, the body of the message is not downloaded until it is invoked (for example by clicking on the message in Thunderbird's message list). Before Thunderbird can display the message body, it must download it from the email server. When Thunderbird has to download many messages from the email server, it can result in a temporary performance lag. This is partially caused by the download process itself, but also caused by the indexing process (whereby the text of messages is analyzed and indexed, enabling fast and powerful message search). Once the downloading and indexing is complete, performance returns to normal. The status of the synchronization is displayed in Thunderbird's bottom left corner. Thunderbird's full-text search of the message body is only available for messages that have been synchronized (that is, downloaded). For non-synchronized messages, only the message headers are searchable. # Disk space usage
+If you have a lot of email and you have space constraints on your local drive, you may not want to synchronize all your messages. As noted above, message headers will still be viewable within Thunderbird on the local machine. However, the body of messages will only be downloaded "on demand", and will not be available when you are offline. To manually configure the synchronization properties, open the Synchronization and Storage page in the Account Settings dialog (Tools > Account Settings...Edit > Account Settings...). # Configuring synchronization and disk space usage
+Open the Synchronization and Storage page in the Account Settings dialog (Tools > Account Settings...Edit > Account Settings...): At the top of the page,Keep messages for this account on this computershould be checked if you want to synchronize messages between your local system and your mail server. If this option is un-checked, you can specify individual folders for synchronization. Click theAdvanced...button: The folders that are checked will be synchronized. Sub-folders are not automatically synchronized just because the parent folder is checked. Instead, you must check each folder individually. General disk space settings are configured in the lower section of the Synchronization and Storage page. You can set general synchronization preferences (such as synchronize recent messages or messages under a certain size). This part of the page also has options for batch-deleting messages (which should, of course, be used with caution). Share this article:http://mzl.la/1ApHiDr These fine people helped write this article: ### Volunteer
+Grow and share your expertise with others. Answer questions and improve our knowledge base. Learn More ##### Mozilla
+- Report Trademark Abuse
+- Source code
+- Twitter
+- Join our Community
+- Explore Help Articles ##### Firefox
+- Download
+- Firefox desktop
+- Android Browser
+- iOS Browser
+- Focus Browser ##### Firefox for Developers
+- Developer Edition
+- Beta
+- Beta for Android
+- Nightly
+- Nightly for Android ##### Mozilla Account
+- Sign In/Up
+- What Is It?
+- Reset Password
+- Sync Your Data
+- Get Help
+- Twitter(@firefox)
+- YouTube(firefoxchannel)
+- Instagram(firefox)
+- mozilla.org
+- Terms of Service
+- Privacy
+- Cookies
+- Contact
+VisitMozilla Corporation’snot-for-profit parent, theMozilla Foundation. Portions of this content are ©1998–2025 by individual mozilla.org contributors. Content available under aCreative Commons license. 
+
+----------
+Дата извлечения: 2025-05-16 21:56:18

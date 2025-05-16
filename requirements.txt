@@ -1,0 +1,13 @@
+openai
+python-telegram-bot
+requests
+beautifulsoup4
+langchain
+langchain-openai
+langchain-chroma
+chromadb
+tiktoken
+pyhtml2pdf
+playwright
+lxml
+docx2txt
