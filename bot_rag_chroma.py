@@ -1,25 +1,37 @@
+from langchain_chroma import Chroma
+from langchain_openai import OpenAIEmbeddings
 import os
 import openai
 import requests
 from telegram import Update
 from telegram.ext import ApplicationBuilder, CommandHandler, MessageHandler, filters, ContextTypes
-from langchain_openai import OpenAIEmbeddings
-from langchain_chroma import Chroma
 
 # ---------------- Secure Configuration ----------------
 TELEGRAM_TOKEN = os.getenv("TELEGRAM_TOKEN")
 OPENAI_API_KEY = os.getenv("OPENAI_API_KEY")
 SERPER_API_KEY = os.getenv("SERPER_API_KEY")
-CHROMA_DB_DIR = "./chroma_db"
+CHROMA_DB_URL = os.getenv("CHROMA_DB_URL")  # ⭐ الآن نحمل Chroma من Supabase URL
 # ------------------------------------------------------
 
 # Initialize OpenAI Client
 client = openai.OpenAI(api_key=OPENAI_API_KEY)
 
-# Initialize ChromaDB Retriever
-embedding = OpenAIEmbeddings(api_key=OPENAI_API_KEY)
-db = Chroma(persist_directory=CHROMA_DB_DIR, embedding_function=embedding)
-retriever = db.as_retriever()
+# Custom Chroma retriever that works from remote Supabase SQLite file
+def get_chroma_from_supabase(url):
+    local_file = "./chroma_db.sqlite3"
+    if not os.path.exists(local_file):
+        print("⬇ Downloading ChromaDB from Supabase...")
+        response = requests.get(url)
+        with open(local_file, "wb") as f:
+            f.write(response.content)
+        print("✅ Download complete.")
+    else:
+        print("✅ ChromaDB already exists locally, using cache.")
+    embeddings = OpenAIEmbeddings(api_key=OPENAI_API_KEY)
+    db = Chroma(persist_directory=".", embedding_function=embeddings)
+    return db.as_retriever()
+
+retriever = get_chroma_from_supabase(CHROMA_DB_URL)
 
 # Web Search using Serper API
 def web_search(query):
